@@ -1,0 +1,53 @@
+// Responsive Media Query Mixin Start
+
+@mixin mq($value)
+  @if $value == l-laptop
+    @media (max-width:1280px)
+      @content
+  @else if $value == laptop
+    @media (max-width:1199px)
+      @content
+  @else if $value == tab
+    @media(max-width:991px)
+      @content
+  @else if $value == l-mobile
+    @media(max-width:767px)
+      @content
+  @else if $value == s-mobile
+    @media(max-width:480px)
+      @content
+  @else if $value == xs-mobile
+    @media(max-width:320px)
+      @content
+
+// Responsive Media Query Mixin End
+
+// Animation mixin start
+
+@mixin keyframes($animation-name)
+  @-webkit-keyframes #{$animation-name}
+    @content
+  @-keyframes #{$animation-name}
+    @content
+
+@mixin animate($name, $duration, $iteration)
+  -webkit-animation-name: $name
+  animation-name: $name
+  -webkit-animation-duration: $duration
+  animation-duration: $duration
+  -webkit-animation-iteration-count: $iteration
+  animation-iteration-count: $iteration
+
+// Animation mixin end
+// Top to bottom animation start
+
+@include keyframes(anim-ttb)
+  from
+    transform: translateY(0px)
+  to
+    transform: translateY(15px)
+
+@mixin anim-ttb
+  @include animate(anim-ttb, 2s, infinite)
+
+// Top to bottom animation end

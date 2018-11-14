@@ -1,0 +1,491 @@
+/*
+    **********************************
+      01 - Header section css start
+    **********************************
+.hero-section
+	z-index: 11
+	.hero-content
+		h2
+			@extend .c3
+			font: 400 72px/80px 'Raleway', sans-serif
+			span
+				font-weight: 700
+			@include mq(l-mobile)
+				font: 400 55px/60px 'Raleway', sans-serif
+		p
+			margin: 25px 0 0
+			@extend .c3
+			font: 400 22px/32px 'Raleway', sans-serif
+			span
+				font-weight: 700
+			@include mq(l-mobile)
+				font: 300 17px/25px 'Raleway', sans-serif
+	.scroll-to-next
+		position: absolute
+		bottom: 90px
+		// right: 50%
+		// transform: translate(-50%,0)
+		display: inline-block
+		@extend .c3
+		font-size: 42px
+		@extend .trans
+		@include anim-ttb
+		a
+			@extend .c3
+	.rid-menu-section
+		position: absolute
+		bottom: 0
+		padding: 5px 0
+		@extend .trans
+		.navbar-toggler
+			background: rgba(225, 100, 40, 0.8)
+			border-radius: 0
+			padding: 3px 10px
+			margin: auto
+			cursor: pointer
+			.icon-bar
+				width: 25px
+				height: 3px
+				background: #ffffff
+				display: block
+				margin: 4px 0
+		.header-menu
+			@include mq(l-mobile)
+				text-align: center
+				margin: 15px
+				box-shadow: 0 0px 3px rgba(255,255,255,.4)
+				background: rgba(0,0,0,.3)
+				padding: 15px 0
+			li
+				a
+					padding: 10px 13px
+					color: #EF9037
+					text-transform: uppercase
+					font: 500 14px/14px 'Raleway', sans-serif
+					@extend .trans
+					&:hover
+						background: rgba(225, 100, 40, 0.8)
+						@extend .c3
+						text-shadow: 0 2px 2px #000000
+					@include mq(tab)
+						padding: 10px 11px
+					@include mq(l-mobile)
+						display: block
+	.rid-menu-section.shrink_header.rid-overlay
+		position: fixed
+		top: 0
+		left: 0
+		height: 60px
+		z-index: 999
+		&::after
+			background: rgba(0, 0, 0, 0.8)
+		.navbar
+			padding: 10px 0
+		.header-menu
+			@include mq(l-mobile)
+				background: rgba(0, 0, 0, 0.8)
+				margin: 12px 0
+				box-shadow: none
+
+/*
+    **********************************
+      02 - About me section start
+    **********************************
+.about-me-section.rid-overlay
+	&::after
+		background: rgba(0,0,0,0.8)
+.about-me-section
+	overflow: hidden
+	@include mq(l-mobile)
+		padding: 30px 0
+	.profile-box
+		padding: 60px 0
+		@include mq(l-mobile)
+			padding: 0 0 50px
+		.about-me-img
+			width: 150px
+			height: 150px
+			background-size: cover
+			background-position: center center
+			border-radius: 50%
+			background-repeat: no-repeat
+			margin: 0 auto
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.8)
+		h2
+			text-transform: uppercase
+			@extend .c3
+			font: 700 25px/26px 'Raleway', sans-serif
+			margin: 30px 0 10px 0
+		h5
+			@extend .c3
+			font: 300 18px/22px 'Raleway', sans-serif
+			border-bottom: 1px solid #ffffff
+			display: inline-block
+			padding-bottom: 5px
+	.rid-overlay.about-cotent-overlay
+		&::after
+			background: rgba(0, 0, 0, 0.4)
+		&::before
+			content: ""
+			width: 500%
+			height: 100%
+			background: rgba(0, 0, 0, 0.4)
+			position: absolute
+			right: -500%
+			top: 0
+			z-index: -1
+			@include mq(l-mobile)
+				display: none
+		.about-me-content
+			position: relative
+			padding: 45px 10px
+			@include mq(l-mobile)
+				text-align: center
+				padding: 20px
+			&::after
+				content: ""
+				width: 0
+				height: 0
+				border-color:  transparent rgba(0, 0, 0, 0.4)  transparent transparent
+				border-style: solid
+				border-width: 20px
+				position: absolute
+				top: 50%
+				left: -55px
+				@include mq(l-mobile)
+					border-color:  transparent transparent rgba(0, 0, 0, 0.4) transparent
+					top: auto
+					bottom: 100%
+					left: 50%
+					transform: translate(-50%,0)
+			h2
+				@extend .c3
+				font: 600 25px/30px 'Open Sans',sans-serif
+				text-transform: uppercase
+				margin: 0 0 20px
+			p
+				font: 300 16px/28px 'Open Sans',sans-serif
+				@extend .c3
+			.about-me-btn-group
+				margin-top: 20px
+				a.rid-btn
+					margin-right: 10px
+					@include mq(tab)
+						margin-right: 0
+						margin-bottom: 10px
+						width: 240px
+						text-align: center
+
+/*
+    **********************************
+      03 - Employment section start
+    **********************************
+
+.employment-section
+	.resume-cat-details
+		.resume-cat-event
+			position: relative
+			&::before
+				content: ""
+				width: 2px
+				height: 100%
+				@extend .c6-bg
+				position: absolute
+				left: 0
+				top: 0
+			.resume-cat-single-event
+				list-style: none
+				padding: 0 80px 40px 0
+				position: relative
+				@include mq(tab)
+					padding: 0 0 40px 0
+				&:last-child
+					padding-bottom: 0
+				&:hover
+					.event-date
+						@extend .c4-bg
+					h2
+						@extend .c2
+				&::before
+					content: ""
+					width: 20px
+					height: 20px
+					@extend .c4-bg
+					position: absolute
+					left: -59px
+					top: 0px
+					margin: 10px
+					transform: rotate(45deg)
+					outline: 10px solid $c3
+					@extend .trans
+					&:hover
+						@extend .c2-bg
+				.event-date
+					@extend .c2-bg
+					@extend .c3
+					display: inline-block
+					font: 700 20px/25px 'Open Sans', sans-serif
+					text-transform: uppercase
+					padding: 5px 25px
+					@extend .trans
+				h2
+					@extend .c5
+					text-transform: uppercase
+					font: 700 28px/33px 'Open Sans',sans-serif
+					margin: 15px 0
+					@extend .trans
+				h3
+					@extend .c4
+					text-transform: capitalize
+					font: 300 25px/30px 'Open Sans',sans-serif
+					margin: 0 0 10px
+
+#emp-sec.employment-section
+	.resume-cat-title
+		@include mq(l-mobile)
+			margin: 0 0 30px
+
+/*
+    **********************************
+      04 - Skill section start
+    **********************************
+.skill-section
+	.skill-section-content
+		.skill-bar
+			width: 100%
+			background-color: #dddddd
+			margin-top: 30px
+			.skill-amount
+				@extend .c3
+				font: 300 16px/20px 'Open Sans',sans-serif
+				text-transform: uppercase
+				padding: 12px 0 12px 15px
+			.html
+				width: 95%
+				background: #1abc9c
+			.css
+				width: 85%
+				background: #2ECC71
+			.bs
+				width: 80%
+				background: #3498DB
+			.js
+				width: 50%
+				background: #9B59B6
+			.ps
+				width: 70%
+				background: #E67E22
+			.wp
+				width: 40%
+				background: #E74C3C
+			.git
+				width: 50%
+				background: #F39C12
+
+/*
+    **********************************
+      05 - Award section start
+    **********************************
+.award-section
+	.award-content
+		.single-award-content
+			margin-bottom: 20px
+			.award-img
+				float: left
+				max-width: 150px
+				font-size: 65px
+				line-height: 65px
+				@include mq(tab)
+					font-size: 50px
+				@include mq(s-mobile)
+					max-width: 100%
+					display: block
+					width: 100%
+					text-align: center
+			.award-text
+				float: none
+				display: inline-block
+				overflow: hidden
+				padding-left: 30px
+				@include mq(tab)
+					padding-left: 15px
+				@include mq(s-mobile)
+					padding: 10px 0 0
+					text-align: center
+					width: 100%
+				h4
+					text-transform: uppercase
+					font: 700 25px/30px 'Open Sans',sans-serif
+					@extend .c5
+					@include mq(tab)
+						font-size: 20px
+						line-height: 22px
+
+/*
+    **********************************
+      06 - Portfolio section start
+    **********************************
+.portfolio-section
+	.portfolio-title
+		border: 2px solid $c3
+		padding: 15px 0
+		margin: 15px 0 70px 0
+		h2
+			text-transform: uppercase
+			font: 700 30px/35px "Raleway", sans serif
+			@extend .c3
+	.single-portfolio-content
+		height: 250px
+		position: relative
+		z-index: 1
+		border: 5px solid #dddddd
+		margin: 15px 0
+		@extend .trans
+		.single-portfolio-hover-content
+			position: absolute
+			width: 100%
+			height: 100%
+			background: rgba(0,0,0,0.4)
+			a
+				@extend .c3
+				position: absolute
+				width: 100%
+				height: 100%
+				left: 0
+				top: 0
+				visibility: hidden
+				opacity: 0
+				@extend .trans
+				z-index: 1
+				&::after
+					content: ""
+					width: 100%
+					height: 100%
+					background: rgba(0,0,0,0.7)
+					position: absolute
+					top: 0
+					left: 0
+					z-index: -1
+				.fa
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%,-50%)
+		&:hover
+			outline: 7px solid rgba(0,0,0,0.3)
+			.single-portfolio-hover-content
+				a
+					visibility: visible
+					opacity: 1
+
+.portfolio-section.rid-overlay
+	&::after
+		background: rgba(66, 53, 62, 0.9)
+
+/*
+    **********************************
+      07 - Testimonial section start
+    **********************************
+.rid-sec-title
+	.rid-sec-title-content.testimonial-title
+		border: 2px solid $c2
+
+.testimonial-section
+	.testimonial-carousel
+		.owl-dots
+			text-align: center
+			margin-top: 30px
+			.owl-dot
+				width: 15px
+				height: 15px
+				background: #cccccc
+				display: inline-block
+				margin: 5px
+				border-radius: 50%
+			.owl-dot.active
+				@extend .c2-bg
+		.single-testimonial-slide
+			h6
+				margin-top: 20px
+
+/*
+    **********************************
+      08 - Contact us section start
+    **********************************
+.contact-section
+	.rid-sec-title
+		.rid-sec-title-content.contact-title
+			border: 2px solid #666666
+			z-index: 1
+			h2
+				color: #ffffff
+			.title-icon
+				background: rgba(0,0,0,0.9)
+				@extend .c3
+	.contact-section-content
+		p
+			margin-bottom: 25px
+			text-align: center
+		.contact-form
+			.contact-inp-field
+				background: #555555
+				color: #dddddd
+				height: auto
+				padding: 17px
+				margin: 15px 0
+				border: 0
+				border-radius: 0
+				width: 100%
+			textarea.contact-inp-field
+				color: #868E96
+			input.rid-btn
+				background: #000000
+				@extend .c3
+				border: 0
+				text-transform: uppercase
+				letter-spacing: 2px
+				padding: 13px 50px !important
+				margin-top: 15px
+				cursor: pointer
+				@extend .trans
+				&:hover
+					background: #555555
+
+.contact-section.rid-overlay
+	&::after
+		background: rgba(0,0,0,0.9)
+
+/*
+    **********************************
+      09 - Footer section start
+    **********************************
+.footer-section
+	background: #0F0F0F
+	.footer-content
+		.social-link
+			margin: 0
+			padding: 0
+			list-style: none
+			li
+				display: inline-block
+				padding: 0 5px
+				a
+					@extend .c5-bg
+					@extend .c3
+					display: block
+					font-size: 18px
+					line-height: 50px
+					width: 50px
+					height: 50px
+					border-radius: 50%
+					@extend .trans
+					&:hover
+						@extend .c2-bg
+					@include mq(tab)
+						line-height: 40px
+						width: 40px
+						height: 40px
+		p
+			margin-top: 25px
+
+// End of main sass

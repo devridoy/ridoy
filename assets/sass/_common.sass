@@ -1,0 +1,191 @@
+// Global SASS start
+
+$font-os: 'Open Sans', sans-serif
+$font-ral: 'Raleway', sans-serif
+
+a
+  text-decoration: none
+  outine: none
+  display: inline-block
+  &:hover
+    text-decoration: none
+  &:focus
+    text-decoration: none
+  &:active
+    text-decoration: none
+
+.trans
+  -webkit-transition: all 0.4s
+  -moz-transition: all 0.4s
+  -ms-transition: all 0.4s
+  -o-transition: all 0.4s
+  transition: all 0.4s
+
+.area
+  width: 100%
+  float: left
+
+img
+  max-width: 100%
+
+h1,h2,h3,h4,h5,h6,p
+  margin: 0
+
+html,body
+  height: 100%
+
+body
+  font-family: $font-os
+  font-size: 14px
+  line-height: 20px
+  color: #838C95
+
+p
+  @extend .c5
+  font: 300 16px/25px 'Open Sans',sans-serif
+
+/*-- Preloader content start --*/
+
+.no-js #loader
+  display: none
+.js #loader
+  display: block
+  position: absolute
+  left: 100px
+  top: 0
+.rid-preloader
+  position: fixed
+  left: 0px
+  top: 0px
+  width: 100%
+  height: 100%
+  z-index: 999999999
+  background: url(../img/preloader.gif) center no-repeat #fff
+
+/*-- Preloader content end --*/
+
+// Section paddnig sass start
+
+.rid-sec-pad
+  padding: 45px 0
+  @include mq(l-mobile)
+    padding: 20px 0 30px
+
+// Button SASS start
+
+.rid-btn
+  @extend .c6-bg
+  @extend .c3
+  display: inline-block !important
+  padding: 9px 30px !important
+  font: 500 14px/24px 'Raleway',open sans !important
+  @extend .trans
+  &:hover
+    @extend .c4-bg
+    @extend .c3
+  i.fa
+    margin-right: 7px
+
+// Section overlay start
+
+.rid-overlay
+  position: relative
+  z-index: 1
+  &::after
+    content: ""
+    width: 100%
+    height: 100%
+    background: rgba(0,0,0,0.5)
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+
+.rid-grad-overlay
+  position: relative
+  z-index: 1
+  &::after
+    content: ""
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    opacity: 0.7
+    background: #e16428
+    background: -moz-linear-gradient(left, #e16428 0%, #e5cf29 100%)
+    background: -webkit-linear-gradient(left, #e16428 0%,#e5cf29 100%)
+    background: linear-gradient(to right, #e16428 0%,#e5cf29 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e16428', endColorstr='#e5cf29',GradientType=1 )
+
+// Section background sass start
+
+.rid-sec-bg
+  background-color: #dddddd
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+
+// Section title sass start
+
+.rid-sec-title
+  padding: 70px 0 0
+  .rid-sec-title-content
+    border: 2px solid $c6
+    padding: 15px 0
+    position: relative
+    z-index: -1
+    h2
+      @extend .c4
+      text-transform: uppercase
+      font: 700 30px/35px 'Raleway', sans serif
+    .title-icon
+      position: absolute
+      bottom: -10px
+      left: 50%
+      transform: translate(-50%,0)
+      z-index: 2
+      @extend .c3-bg
+      width: 30px
+      font-size: 20px
+      line-height: 20px
+      @extend .c4
+
+// Scroll to top  content start
+
+.scroll-to-top
+  background: rgba(237, 85, 101, 0.7)
+  width: 50px
+  height: 50px
+  display: inline-block
+  font-size: 20px
+  line-height: 45px
+  text-align: center
+  @extend .c3
+  border-radius: 50%
+  position: fixed
+  right: 30px
+  bottom: 15px
+  cursor: pointer
+  opacity: 0
+  z-index: 9
+  @extend .trans
+  &:hover
+    background: rgba(51, 51, 51, 0.7)
+
+// Resume category title
+
+.resume-cat-title
+  @include mq(l-mobile)
+    text-align: center
+    margin: 25px 0
+  h2
+    font: 700 28px/30px 'Raleway',sans serif
+    text-transform: uppercase
+    @extend .c4
+    border-bottom: 2px solid $c6
+    display: inline-block
+    padding-bottom: 5px
+
+// End of common sass
